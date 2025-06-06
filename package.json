@@ -100,12 +100,6 @@
   "overrides": {
     "es5-ext": "0.10.53"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "jsdelivr": "dist/umd/deepgram.js",
   "unpkg": "dist/umd/deepgram.js"
 }
