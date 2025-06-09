@@ -1,6 +1,6 @@
 {
-  "name": "@deepgram/sdk",
-  "version": "0.0.0-automated",
+  "name": "@rhetorica-software/deepgram-js-sdk",
+  "version": "4.2.0",
   "description": "Isomorphic Javascript client for Deepgram",
   "keywords": [
     "javascript",
@@ -10,12 +10,15 @@
     "speech",
     "sdk"
   ],
-  "homepage": "https://github.com/deepgram/deepgram-js-sdk",
-  "bugs": "https://github.com/deepgram/deepgram-js-sdk/issues",
+  "homepage": "https://github.com/rhetorica-software/deepgram-js-sdk",
+  "bugs": "https://github.com/rhetorica-software/deepgram-js-sdk/issues",
   "license": "MIT",
   "author": {
     "name": "Deepgram DevRel Team",
     "email": "devrel@deepgram.com"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   },
   "contributors": [
     "Brian Barrow",
@@ -36,7 +39,7 @@
   "module": "dist/module/index.js",
   "types": "dist/module/index.d.ts",
   "sideEffects": false,
-  "repository": "deepgram/deepgram-js-sdk",
+  "repository": "https://github.com/rhetorica-software/deepgram-js-sdk",
   "scripts": {
     "clean": "rimraf dist docs/v2",
     "format": "prettier --write \"{src,test}/**/*.ts\"",

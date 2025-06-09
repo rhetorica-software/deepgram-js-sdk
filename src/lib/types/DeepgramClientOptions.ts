@@ -65,6 +65,7 @@ export interface DeepgramClientOptions {
   read?: NamespaceOptions;
   speak?: NamespaceOptions;
   agent?: NamespaceOptions;
+  isNative?: boolean;
 
   /**
    * @deprecated as of 3.4, use a namespace like `global` instead

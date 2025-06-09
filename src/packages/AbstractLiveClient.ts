@@ -141,7 +141,16 @@ export abstract class AbstractLiveClient extends AbstractClient {
      * Native websocket transport (browser)
      */
     if (NATIVE_WEBSOCKET_AVAILABLE) {
-      this.conn = new WebSocket(requestUrl, `token, ${this.namespaceOptions.key}`);
+      if (this.options.isNative) {
+        // @ts-expect-error - because
+        this.conn = new WebSocket(requestUrl.toString(), null, {
+          headers: {
+            Authorization: `Token ${this.namespaceOptions.key}`,
+          },
+        });
+      } else {
+        this.conn = new WebSocket(requestUrl, ["token", this.namespaceOptions.key]);
+      }
       this.setupConnection();
       return;
     }
